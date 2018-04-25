@@ -22,7 +22,7 @@ public class DirectoryScannerServiceImplTest {
      * @throws java.lang.Exception
      */
     @Before
-    public void setUp() throws Exception {
+    public void setUp()  {
         directoryScannerService = new DirectoryScannerService();
 
     }
@@ -36,7 +36,7 @@ public class DirectoryScannerServiceImplTest {
 
 
     @Test
-    public void displayFileAttributeForSupportedFileType() throws IOException {
+    public void displayFileAttributeForSupportedFileType()  {
         List<FileInfo> list = directoryScannerService.getFilesInfoOfDirectory(configDir, "csv");
 
         assertEquals("csv", list.get(0).getExtn());
@@ -45,12 +45,12 @@ public class DirectoryScannerServiceImplTest {
 
 
     @Test
-    public void testIfDirectoryContainsSupportedFileTypes() throws IOException {
+    public void testIfDirectoryContainsSupportedFileTypes()  {
         List<FileInfo> list = directoryScannerService.getFilesInfoOfDirectory(configDir, "jpg", "csv");
         assertTrue("Display only supported file types", (list.size() > 0));
     }
     @Test
-    public void testEmptyDirectory() throws IOException {
+    public void testEmptyDirectory()  {
         List<FileInfo> list = directoryScannerService.getFilesInfoOfDirectory(configDir + "empty", "xlsx", "txt");
         assertFalse("Empty directory", (list.size() > 0));
     }
