@@ -3,7 +3,7 @@ Project name:
 dvla-proj
 
 
-##Project Description:
+## Project Description:
 
 Part 1:
 Write a Service layer bean to do the following:
@@ -23,14 +23,14 @@ through all vehicles from excel/csv file.
 4. On the Vehicle details page assert the details (Make/Color) match with expected
 output in excel/csv file.
 
-##Project Approach:
+## Project Approach:
 
 1.	Java 8 is used to create the service layered application to scan the directory for files. Features such as Lambdas and steams are used for development.
 2.	Page object pattern is used for selenium web driver tests for testing the DVLA vehicle information journey.
 3.	Maven is used as build tool and Cucumber-JVM is used as the BDD tool to write the test scenarios in form of feature files in Gherkin language.
 
 
-##Installation:
+## Installation:
 
 1)This project requires maven and java installed on the machine. 
 2)Maven downloads all the required dependencies once the project is downloaded on to the machine.
